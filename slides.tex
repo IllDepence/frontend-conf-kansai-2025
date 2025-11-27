@@ -4,6 +4,7 @@
 \usepackage[deluxe]{luatexja-preset} 
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{caption}
 \usepackage{listings}
 \lstset{
   basicstyle=\footnotesize\ttfamily,
@@ -12,6 +13,7 @@
   breaklines=true,
   showstringspaces=false,
 }
+\captionsetup[figure]{labelformat=empty}
 \setmainjfont{Hiragino Kaku Gothic ProN}
 
 \usetheme[progressbar=none]{metropolis}
@@ -25,6 +27,7 @@
 \definecolor{hf-orange-gradient-right}{HTML}{FFE721}
 \definecolor{hf-blue-gradient-left}{HTML}{48D2E6}
 \definecolor{hf-blue-gradient-right}{HTML}{4D6BD5}
+\definecolor{white}{HTML}{FFFFFF}
 
 \setbeamertemplate{footline}{%
   \begin{tikzpicture}[remember picture, overlay]
@@ -129,40 +132,82 @@
         \end{itemize}}
         \onslide<3->{\item 論文関心
         \begin{itemize}
-            \item 前職：研究\onslide<4->{　（学術論文からの情報抽出）}
+            \item 前職：研究\onslide<5->{　（学術論文からの情報抽出）}
+            \onslide<4->{\begin{itemize}
+                \item 論文を読んだり書いたり
+                \onslide<6->{\item 論文の形式や構造についてたくさん考えた}
+            \end{itemize}
+            }
         \end{itemize}}
     \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{自己紹介}
-    $\rightarrow$論文の形式や構造に注目した
-
-    例：
+\begin{frame}[t]{論文とは}
+    \only<1>{{\color{white} 空白}}
+    \only<2>{文章です}
+    \only<3>{数式が入っている}
+    \only<4>{図と表も}
+    \only<5>{参考文献がある}
+    \only<6>{ほかの論文を参照している}
+    \only<7-10>{文章＋数式＋図＋表＋リンク}
     \begin{figure}
-        \begin{center}\includegraphics[height=0.45\textheight]{./img/unarxive_schema.pdf}\end{center}
+        \begin{overprint}
+            \onslide<1>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_1.png}\end{center}
+            \onslide<2>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_2.png}\end{center}
+            \onslide<3>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_3.png}\end{center}
+            \onslide<4>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_4.png}\end{center}
+            \onslide<5>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_5.png}\end{center}
+            \onslide<6-7>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_6.png}\end{center}
+            \onslide<8>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_7.png}\end{center}
+            \onslide<9>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_8.png}\end{center}
+            \onslide<10>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_9.png}\end{center}
+        \end{overprint}
     \end{figure}
 \end{frame}
 
-\begin{frame}[t]{学術論文}
-    学術論文はどういう存在か説明する
-
-    研究結果を共有 $\rightarrow$　分散（以前印刷、今PDF、ウェブになりかけ）
-
-    研究者（＝個人・出版のプロじゃない人）が書く（最終的な形までのケースがある）、\LaTeX\ やWordから生まれる
-
-    出版社/学会から形式・レイアウトのルールがある
+\begin{frame}[t]{ウェブ版の機械と課題}
+    \begin{itemize}
+        \item 機械
+        \begin{itemize}
+            \item アクセシビリティー
+            \item 見た目の柔軟性（レスポンシブデザイン等）
+        \end{itemize}
+        \item 課題
+        \begin{itemize}
+            \item 見た目の再現性
+            \item 言語対応
+            \item 紙・PDF背景による技術的負債
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
-% \begin{frame}[t]{学術論文}
-%     \begin{figure}
-%         \begin{overprint}
-%             \onslide<1>\begin{center}\includegraphics[height=0.70\textheight]{./img/ja_paper_pdf2web1_onlypdf.png}\end{center}
-%             \onslide<2>\begin{center}\includegraphics[height=0.70\textheight]{./img/ja_paper_pdf2web2_onlypdf.png}\end{center}
-%             \onslide<3>\begin{center}\includegraphics[height=0.70\textheight]{./img/ja_paper_pdf2web1.png}\end{center}
-%             \onslide<4>\begin{center}\includegraphics[height=0.70\textheight]{./img/ja_paper_pdf2web2.png}\end{center}
-%         \end{overprint}
-%     \end{figure}
-% \end{frame}
+\begin{frame}[t]{なぜウェブ版が難しいか}
+    技術的負債
+    \begin{figure}
+        \begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make.png}\end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[t]{論文の特徴}
+    \only<1>{
+    多いです
+    \begin{figure}
+        \begin{center}\includegraphics[height=0.6\textheight]{./img/arxiv_stats.png}\end{center}
+        \caption{arxiv.org 1ヶ月当たりの投稿数\\ {\tiny \url{https://arxiv.org/stats/monthly_submissions}}}
+    \end{figure}
+    }
+    \only<2->{
+    多くて、\\
+    研究者が書く
+    \begin{itemize}
+        \item 研究者$\rightarrow$エディター$\rightarrow$出版社$\rightarrow$読者（ジャーナル）
+        \item 研究者~\hphantom{$\rightarrow$エディター$\rightarrow$出版社}~$\rightarrow$読者（プレプリント）
+    \end{itemize}
+    }
+    \only<3->{
+    $\rightarrow$ ウェブ版の作成は(ほぼ)自動でないと実現しない
+    }
+\end{frame}
 
 \section{まとめ}
 
