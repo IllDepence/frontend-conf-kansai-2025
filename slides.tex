@@ -284,10 +284,20 @@
     \end{figure}
     {\tiny \url{https://dhq.digitalhumanities.org/vol/17/2/000673/000673.html}}
     }
-    \only<5>{
-    TODO: LaTeX + HTMLを用意したり、紙を諦めてPDFをHTMLから用意したり（追加努力 or 妥協）
+    \only<5-9>{
+    \only<5>{以下をどう解決する？}
+    \only<6>{頑張ってMarkdownから作る}
+    \only<7>{頑張ってLaTeX+HTMLを用意する}
+    \only<8>{HTMLから作ってPDFで妥協して}
+    \only<9>{HTMLから作ってPDFで妥協して印刷物を諦める}
     \begin{figure}
-        \begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make.png}\end{center}
+        \begin{overprint}
+            \onslide<5>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make.png}\end{center}
+            \onslide<6>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make_frommd.png}\end{center}
+            \onslide<7>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make_double.png}\end{center}
+            \onslide<8>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make_fromhtml_1.png}\end{center}
+            \onslide<9>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make_fromhtml_2.png}\end{center}
+        \end{overprint}
     \end{figure}
     }
 \end{frame}
@@ -295,9 +305,14 @@
 \section{先進的な取り組み}
 
 \begin{frame}[t]{ar5iv}
-    TODO: 下の矢印
+    LaTeXから自動的にHTMLを
     \begin{figure}
-        \begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make.png}\end{center}
+        \begin{overprint}
+            \onslide<1>\begin{center}\includegraphics[height=0.60\textheight]{./img/paper_make_ar5iv.png}\end{center}
+            \onslide<2>\begin{center}\includegraphics[height=0.60\textheight]{./img/ar5iv_3.png}\end{center}
+            \onslide<3>\begin{center}\includegraphics[height=0.60\textheight]{./img/ar5iv_1.png}\end{center}
+            \onslide<4>\begin{center}\includegraphics[height=0.60\textheight]{./img/ar5iv_2.png}\end{center}
+        \end{overprint}
     \end{figure}
 \end{frame}
 
