@@ -2,7 +2,7 @@
 
 A talk given on 2025-11-30 in Osaka at [フロントエンドカンファレンス関西2025](https://fortee.jp/fec-kansai-2025/proposal/341b72d6-7061-4b76-b721-ada14d47705f).
 
-Compile with `$ latexmk -lualatex slides.tex`.
+Compile with `$ latexmk -lualatex slides.tex`.  
 If you're looking at this on GitHub, you should find the compiled slides in the releases.
 
 ## Description
